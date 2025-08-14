@@ -15,8 +15,6 @@ import lombok.NoArgsConstructor;
 @Entity
 @Data
 @Table(name="usuarios")
-
-
 public class Usuario {
 @Id
 @Column(name= "id_usuario")
