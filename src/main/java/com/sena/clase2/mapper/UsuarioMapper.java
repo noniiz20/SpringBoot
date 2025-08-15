@@ -12,4 +12,6 @@ Usuario toUsuario(UsuarioDto usuarioDto); /*consultar */
 UsuarioDto toUsuarioDto(Usuario usuario); /*crear */
 
 List<UsuarioDto>toUsuarioDtoList(List<Usuario>usuarios);
+
+void updateUsuario(Usuario usuario, UsuarioDto usuarioDto);
 }

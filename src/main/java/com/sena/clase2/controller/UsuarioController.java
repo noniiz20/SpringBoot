@@ -17,10 +17,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-
-
-
 
 
 @RestController
@@ -92,7 +88,9 @@ private UsuarioRepositorio userRepo;
     public ResponseEntity<UsuarioDto>deleteUsuario(@PathVariable Integer id){
         return new ResponseEntity<>(userServices.deleteUsuario(id),HttpStatus.OK);
     }
+    @PutMapping("/user/{id_usuario}")
+    public ResponseEntity <UsuarioDto> updateuser(@PathVariable Integer id_usuario, @RequestBody UsuarioDto usuarioDto) {
+        return new ResponseEntity<>(userServices.updateuser(id_usuario, usuarioDto), HttpStatus.OK);
+    }
     
 }
-
-
