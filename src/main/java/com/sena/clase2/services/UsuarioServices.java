@@ -9,6 +9,7 @@ public interface UsuarioServices{
 public UsuarioDto getUsuario(Integer id_usuario);
 public UsuarioDto saveUsuario(UsuarioDto usuarioDto);
 public List<UsuarioDto> getUsuarios();
+public  UsuarioDto deleteUsuario(Integer id_Usuario);
 
 }
 

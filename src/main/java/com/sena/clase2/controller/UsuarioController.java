@@ -88,7 +88,10 @@ private UsuarioRepositorio userRepo;
     public ResponseEntity<List<UsuarioDto>> getUsuarios() {
         return new ResponseEntity<>(userServices.getUsuarios(), HttpStatus.OK);
     }
-    
+    @DeleteMapping("/usersde/{id}")
+    public ResponseEntity<UsuarioDto>deleteUsuario(@PathVariable Integer id){
+        return new ResponseEntity<>(userServices.deleteUsuario(id),HttpStatus.OK);
+    }
     
 }
 

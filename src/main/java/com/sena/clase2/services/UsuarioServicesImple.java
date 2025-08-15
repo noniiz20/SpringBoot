@@ -36,5 +36,11 @@ public List<UsuarioDto> getUsuarios(){
 List<Usuario> usuarios=userRepo.findAll();
 return userMapper.toUsuarioDtoList(usuarios);
 }
+@Override
+public UsuarioDto deleteUsuario(Integer id_Usuario){
+    Usuario usuario = userRepo.findById(id_Usuario).get();
+    userRepo.delete(usuario);
+    return userMapper.toUsuarioDto(usuario);
+}
 }
 
